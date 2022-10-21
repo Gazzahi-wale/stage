@@ -1,0 +1,21 @@
+<div class="container pt-4">
+    <table class="table table-striped mt-4">
+        <thead>
+          <tr>
+            <th scope="col">Nom du utilisateur</th>
+            <th scope="col">Email</th>
+            <th scope="col">Role</th>
+    
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let x of tab">
+            <td> {{ x.nom }} </td>
+            <td>{{ x.email }}</td>
+            <td>{{ x.role }}</td>
+    
+          </tr>
+    
+        </tbody>
+      </table>
+</div>

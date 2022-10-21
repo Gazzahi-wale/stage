@@ -1,0 +1,48 @@
+<div *ngIf="test==true" class="alert alert-success" role="alert">
+    {{ msj }}  </div>
+  
+    <div *ngIf="test==false" class="alert alert-danger" role="alert">
+        {{ msj }}  </div>
+      
+    
+<div class="container shadow mt-4">
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+
+            <h4 class="text-center"> Register</h4>
+            <!-- Email input -->
+            <div class="form-outline mb-4 pt-4">
+                <input [(ngModel)]="email" type="email" id="loginName" class="form-control" />
+                <label class="form-label" for="loginName">Email </label>
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-4 pt-4">
+                <input [(ngModel)]="nom" type="email" id="loginName" class="form-control" />
+                <label class="form-label" for="loginName">Nom</label>
+            </div>
+            <div class="form-outline mb-4 pt-4">
+                <input [(ngModel)]="prenom" type="email" id="loginName" class="form-control" />
+                <label class="form-label" for="loginName">Prenom</label>
+            </div>
+            <div class="form-outline mb-4 pt-4">
+                <select class="form-control" [(ngModel)]="role" id="">
+                    <option value="Etudiant">Etudiant</option>
+                    <option value="Professeur">Professeur</option>
+                </select>
+                <label class="form-label" for="loginName">Role</label>
+
+            </div>
+
+            <!-- Submit button -->
+            <button (click)="register()" type="submit" class="btn btn-primary btn-block mb-4">Register</button>
+
+            <!-- Register buttons -->
+            <a href="" routerLink="/Login"> Login Now</a>
+
+
+        </div>
+
+
+    </div>
+</div>

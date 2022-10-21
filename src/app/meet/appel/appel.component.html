@@ -1,0 +1,23 @@
+
+<div class="container my-5 py-5 z-depth-1">
+    <!--Section: Content-->
+    <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+
+
+            <div class="col-md-6 card shadow w-100 pt-4" style="height:600px;">
+                <div id="jitsi-iframe"></div>
+
+<!--For Custom Controls-->
+<div class="item-center">
+    <span>Custom Controls</span>
+</div>
+<div class="item-center"> 
+    <i (click)="executeCommand('toggleAudio')" class="fas fa-2x btn btn-outline-primary" [ngClass]="isAudioMuted ? 'fa-microphone-slash' : 'fa-microphone'" aria-hidden="true" title="Mute / Unmute"></i>
+    <i (click)="executeCommand('hangup')" class="fas fa-phone-slash fa-2x btn btn-outline-danger" aria-hidden="true" title="Leave"></i>
+    <i (click)="executeCommand('toggleVideo')" class="fas fa-2x btn btn-outline-success" [ngClass]="isVideoMuted ? 'fa-video-slash' : 'fa-video'" aria-hidden="true" title="Start / Stop camera"></i>
+    <i (click)="executeCommand('toggleShareScreen')" class="fas fa-film fa-2x btn btn-outline-warning" aria-hidden="true" title="Share your screen"></i>
+</div>
+
+</div></div></section></div>

@@ -1,0 +1,27 @@
+<div class="mt-4 container">
+    <div *ngIf="role=='Professeur'"> <button [routerLink]="['../addCours']" class="btn btn-success">Ajouter un
+        cours</button>
+        <button [routerLink]="['../AllUsers']" class="btn btn-danger ml-4">List Users</button>
+    </div>
+    <table class="table table-striped mt-4">
+      <thead>
+        <tr>
+          <th scope="col">Nom du cours</th>
+          <th scope="col">Description</th>
+          <th scope="col">Date</th>
+          <th scope="col">Lancer Le cour</th>
+  
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let x of tab">
+          <td> {{ x.nomCours }} </td>
+          <td>{{ x.description }}</td>
+          <td>{{ x.timeStart }}</td>
+          <td><button class="btn btn-success" [routerLink]="['../Appel/', x.nomCours]">Lancer Appel</button></td>
+  
+        </tr>
+  
+      </tbody>
+    </table>
+  </div>
